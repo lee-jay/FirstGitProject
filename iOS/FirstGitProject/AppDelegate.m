@@ -10,6 +10,8 @@
 
 @interface AppDelegate ()
 
+@property(nonatomic, copy) NSString *uuid;
+
 @end
 
 @implementation AppDelegate
