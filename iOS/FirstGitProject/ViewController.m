@@ -10,6 +10,8 @@
 
 @interface ViewController ()
 
+@property(nonatomic, retain) IBOutlet UIButton *button;
+
 @end
 
 @implementation ViewController
@@ -17,6 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    [self.button setBackgroundImage:[[UIImage imageNamed:@"home_btn_order"] resizableImageWithCapInsets:UIEdgeInsetsMake(10, 23, 11, 24) resizingMode:UIImageResizingModeStretch] forState:UIControlStateNormal];
 }
 
 - (void)didReceiveMemoryWarning {

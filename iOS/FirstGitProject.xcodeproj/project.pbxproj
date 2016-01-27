@@ -303,6 +303,7 @@
 				F4CB45F01C48B4B000DDC8B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
