@@ -14,4 +14,6 @@ typedef NSComparisonResult (^ PublicComparator)(NSNumber *, NSNumber *);
 
 + (PublicComparator)ASC;
 
++ (void)doTest;
+
 @end

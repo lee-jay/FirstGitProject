@@ -19,4 +19,19 @@
     };
 }
 
+//Test Cases
++ (void)doTest {
+    NSMutableArray *items = [NSMutableArray array];
+    for (int i=0; i<20; i++) {
+        NSInteger num = arc4random();
+        [items addObject:[NSNumber numberWithInteger:num]];
+        NSLog(@"init %ld", num);
+    }
+    NSLog(@"----------------------");
+    NSArray *sortedItems = [items sortedArrayUsingComparator:PubComparatorTest.ASC];
+    for (NSNumber *num in sortedItems) {
+        NSLog(@"final %@", num);
+    }
+}
+
 @end

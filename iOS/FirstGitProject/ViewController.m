@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "PubComparatorTest.h"
+#import "PubStaticMemberVariablesTest.h"//测试load方法
 
 @interface ViewController ()
 
@@ -23,8 +24,16 @@
     
     [self.button setBackgroundImage:[[UIImage imageNamed:@"home_btn_order"] resizableImageWithCapInsets:UIEdgeInsetsMake(10, 23, 11, 24) resizingMode:UIImageResizingModeStretch] forState:UIControlStateNormal];
     
-    //测试类对象的公用排序方法
-    [self TestPublicComparator];
+//    //测试类对象的公用排序方法
+//    [self doTestPubComparator];
+    
+    //测试load方法（见上方的#import处）
+    //测试initialize方法
+    NSLog(@"PubStaticMemberVariablesTest.A = %@", PubStaticMemberVariablesTest.A);
+    NSLog(@"PubStaticMemberVariablesTest.B = %@", PubStaticMemberVariablesTest.B);
+    PubStaticMemberVariablesTest *testObject = [PubStaticMemberVariablesTest byte:86 name:@"MyCustomValue"];
+    NSLog(@"PubStaticMemberVariablesTest new instance = %@", testObject);
+    NSLog(@"[PubStaticMemberVariablesTest getAll] = %@", [PubStaticMemberVariablesTest getAll]);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,7 +42,7 @@
 }
 
 //Test Cases
-- (void)TestPublicComparator {
+- (void)doTestPubComparator {
     NSMutableArray *items = [NSMutableArray array];
     for (int i=0; i<20; i++) {
         NSInteger num = arc4random();
