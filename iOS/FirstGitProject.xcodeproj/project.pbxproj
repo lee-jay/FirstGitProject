@@ -14,8 +14,8 @@
 		F4CB45E51C48B4B000DDC8B9 /* FirstGitProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F4CB45E31C48B4B000DDC8B9 /* FirstGitProject.xcdatamodeld */; };
 		F4CB45E71C48B4B000DDC8B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4CB45E61C48B4B000DDC8B9 /* Assets.xcassets */; };
 		F4CB45EA1C48B4B000DDC8B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4CB45E81C48B4B000DDC8B9 /* LaunchScreen.storyboard */; };
-		F4CF0C941C71F09E00A6BC9B /* PubComparatorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F4CF0C931C71F09E00A6BC9B /* PubComparatorTest.m */; };
-		F4CF0C971C71F1E900A6BC9B /* PubStaticMemberVariablesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F4CF0C961C71F1E900A6BC9B /* PubStaticMemberVariablesTest.m */; };
+		F4CF0C941C71F09E00A6BC9B /* GlobalComparatorClass.m in Sources */ = {isa = PBXBuildFile; fileRef = F4CF0C931C71F09E00A6BC9B /* GlobalComparatorClass.m */; };
+		F4CF0C971C71F1E900A6BC9B /* JavaEnumClass.m in Sources */ = {isa = PBXBuildFile; fileRef = F4CF0C961C71F1E900A6BC9B /* JavaEnumClass.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,10 +30,10 @@
 		F4CB45E61C48B4B000DDC8B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4CB45E91C48B4B000DDC8B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4CB45EB1C48B4B000DDC8B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F4CF0C921C71F09E00A6BC9B /* PubComparatorTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PubComparatorTest.h; sourceTree = "<group>"; };
-		F4CF0C931C71F09E00A6BC9B /* PubComparatorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PubComparatorTest.m; sourceTree = "<group>"; };
-		F4CF0C951C71F1E900A6BC9B /* PubStaticMemberVariablesTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PubStaticMemberVariablesTest.h; sourceTree = "<group>"; };
-		F4CF0C961C71F1E900A6BC9B /* PubStaticMemberVariablesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PubStaticMemberVariablesTest.m; sourceTree = "<group>"; };
+		F4CF0C921C71F09E00A6BC9B /* GlobalComparatorClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalComparatorClass.h; sourceTree = "<group>"; };
+		F4CF0C931C71F09E00A6BC9B /* GlobalComparatorClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalComparatorClass.m; sourceTree = "<group>"; };
+		F4CF0C951C71F1E900A6BC9B /* JavaEnumClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JavaEnumClass.h; sourceTree = "<group>"; };
+		F4CF0C961C71F1E900A6BC9B /* JavaEnumClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JavaEnumClass.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,10 +92,10 @@
 		F4CF0C911C71F09E00A6BC9B /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				F4CF0C921C71F09E00A6BC9B /* PubComparatorTest.h */,
-				F4CF0C931C71F09E00A6BC9B /* PubComparatorTest.m */,
-				F4CF0C951C71F1E900A6BC9B /* PubStaticMemberVariablesTest.h */,
-				F4CF0C961C71F1E900A6BC9B /* PubStaticMemberVariablesTest.m */,
+				F4CF0C921C71F09E00A6BC9B /* GlobalComparatorClass.h */,
+				F4CF0C931C71F09E00A6BC9B /* GlobalComparatorClass.m */,
+				F4CF0C951C71F1E900A6BC9B /* JavaEnumClass.h */,
+				F4CF0C961C71F1E900A6BC9B /* JavaEnumClass.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -173,8 +173,8 @@
 			files = (
 				F4CB45DF1C48B4B000DDC8B9 /* ViewController.m in Sources */,
 				F4CB45DC1C48B4B000DDC8B9 /* AppDelegate.m in Sources */,
-				F4CF0C941C71F09E00A6BC9B /* PubComparatorTest.m in Sources */,
-				F4CF0C971C71F1E900A6BC9B /* PubStaticMemberVariablesTest.m in Sources */,
+				F4CF0C941C71F09E00A6BC9B /* GlobalComparatorClass.m in Sources */,
+				F4CF0C971C71F1E900A6BC9B /* JavaEnumClass.m in Sources */,
 				F4CB45D91C48B4B000DDC8B9 /* main.m in Sources */,
 				F4CB45E51C48B4B000DDC8B9 /* FirstGitProject.xcdatamodeld in Sources */,
 			);

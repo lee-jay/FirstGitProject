@@ -1,14 +1,14 @@
 //
-//  PubComparatorTest.m
+//  GlobalComparatorClass.m
 //  FirstGitProject
 //
 //  Created by LiJun on 2/15/16.
 //  Copyright © 2016 JayLee. All rights reserved.
 //
 
-#import "PubComparatorTest.h"
+#import "GlobalComparatorClass.h"
 
-@implementation PubComparatorTest
+@implementation GlobalComparatorClass
 
 //NSComparisonResult (^ XChartPainter_ASC)(NSNumber *, NSNumber *) = ^(NSNumber *a, NSNumber *b) {
 //    return (NSComparisonResult)[a integerValue] - [b integerValue];
@@ -28,7 +28,7 @@
         NSLog(@"init %ld", num);
     }
     NSLog(@"----------------------");
-    NSArray *sortedItems = [items sortedArrayUsingComparator:PubComparatorTest.ASC];
+    NSArray *sortedItems = [items sortedArrayUsingComparator:GlobalComparatorClass.ASC];
     for (NSNumber *num in sortedItems) {
         NSLog(@"final %@", num);
     }

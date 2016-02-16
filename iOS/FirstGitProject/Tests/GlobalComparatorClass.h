@@ -1,5 +1,5 @@
 //
-//  PubComparatorTest.h
+//  GlobalComparatorClass.h
 //  FirstGitProject
 //
 //  Created by LiJun on 2/15/16.
@@ -10,7 +10,7 @@
 
 typedef NSComparisonResult (^ PublicComparator)(NSNumber *, NSNumber *);
 
-@interface PubComparatorTest : NSObject
+@interface GlobalComparatorClass : NSObject
 
 + (PublicComparator)ASC;
 

@@ -1,36 +1,36 @@
 //
-//  PubStaticMemberVariablesTest.m
+//  JavaEnumClass.m
 //  FirstGitProject
 //
 //  Created by LiJun on 2/15/16.
 //  Copyright © 2016 JayLee. All rights reserved.
 //
 
-#import "PubStaticMemberVariablesTest.h"
+#import "JavaEnumClass.h"
 
-static PubStaticMemberVariablesTest *A;
-static PubStaticMemberVariablesTest *B;
-static NSDictionary<NSNumber *, PubStaticMemberVariablesTest *> *INDEX;
+static JavaEnumClass *A;
+static JavaEnumClass *B;
+static NSDictionary<NSNumber *, JavaEnumClass *> *INDEX;
 
-@interface PubStaticMemberVariablesTest()
+@interface JavaEnumClass()
 
 @property(assign, nonatomic) Byte value;
 @property(assign, nonatomic) NSString *displayName;
 
 @end
 
-@implementation PubStaticMemberVariablesTest
+@implementation JavaEnumClass
 
-+ (PubStaticMemberVariablesTest *)A {
++ (JavaEnumClass *)A {
     return A;
 }
 
-+ (PubStaticMemberVariablesTest *)B {
++ (JavaEnumClass *)B {
     return B;
 }
 
-+ (PubStaticMemberVariablesTest *)byte:(Byte)byte name:(NSString *)name {
-    PubStaticMemberVariablesTest *area = [[PubStaticMemberVariablesTest alloc] init];
++ (JavaEnumClass *)byte:(Byte)byte name:(NSString *)name {
+    JavaEnumClass *area = [[JavaEnumClass alloc] init];
     area.value = byte;
     area.displayName = name;
     
@@ -42,8 +42,8 @@ static NSDictionary<NSNumber *, PubStaticMemberVariablesTest *> *INDEX;
 }
 
 + (void)initialize {
-    A = [PubStaticMemberVariablesTest byte:(Byte)1 name:@"A"];
-    B = [PubStaticMemberVariablesTest byte:(Byte)2 name:@"B"];
+    A = [JavaEnumClass byte:(Byte)1 name:@"A"];
+    B = [JavaEnumClass byte:(Byte)2 name:@"B"];
     
     INDEX = [NSDictionary dictionaryWithObjectsAndKeys:
              A, @(A.value),
@@ -53,7 +53,7 @@ static NSDictionary<NSNumber *, PubStaticMemberVariablesTest *> *INDEX;
     NSLog(@"Class(%@) has initialized!", [self class]);
 }
 
-+ (NSDictionary<NSNumber *, PubStaticMemberVariablesTest *> *)getAll {
++ (NSDictionary<NSNumber *, JavaEnumClass *> *)getAll {
     return INDEX;
 }
 

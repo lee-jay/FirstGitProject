@@ -7,8 +7,8 @@
 //
 
 #import "ViewController.h"
-#import "PubComparatorTest.h"
-#import "PubStaticMemberVariablesTest.h"//测试load方法
+#import "GlobalComparatorClass.h"
+#import "JavaEnumClass.h"//测试load方法
 
 @interface ViewController ()
 
@@ -29,11 +29,11 @@
     
     //测试load方法（见上方的#import处）
     //测试initialize方法
-    NSLog(@"PubStaticMemberVariablesTest.A = %@", PubStaticMemberVariablesTest.A);
-    NSLog(@"PubStaticMemberVariablesTest.B = %@", PubStaticMemberVariablesTest.B);
-    PubStaticMemberVariablesTest *testObject = [PubStaticMemberVariablesTest byte:86 name:@"MyCustomValue"];
-    NSLog(@"PubStaticMemberVariablesTest new instance = %@", testObject);
-    NSLog(@"[PubStaticMemberVariablesTest getAll] = %@", [PubStaticMemberVariablesTest getAll]);
+    NSLog(@"JavaEnumClass.A = %@", JavaEnumClass.A);
+    NSLog(@"JavaEnumClass.B = %@", JavaEnumClass.B);
+    JavaEnumClass *testObject = [JavaEnumClass byte:86 name:@"MyCustomValue"];
+    NSLog(@"JavaEnumClass new instance = %@", testObject);
+    NSLog(@"[JavaEnumClass getAll] = %@", [JavaEnumClass getAll]);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -50,7 +50,7 @@
         NSLog(@"init %ld", num);
     }
     NSLog(@"----------------------");
-    NSArray *sortedItems = [items sortedArrayUsingComparator:PubComparatorTest.ASC];
+    NSArray *sortedItems = [items sortedArrayUsingComparator:GlobalComparatorClass.ASC];
     for (NSNumber *num in sortedItems) {
         NSLog(@"final %@", num);
     }
