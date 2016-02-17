@@ -16,6 +16,7 @@
 		F4CB45EA1C48B4B000DDC8B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4CB45E81C48B4B000DDC8B9 /* LaunchScreen.storyboard */; };
 		F4CF0C941C71F09E00A6BC9B /* GlobalComparatorClass.m in Sources */ = {isa = PBXBuildFile; fileRef = F4CF0C931C71F09E00A6BC9B /* GlobalComparatorClass.m */; };
 		F4CF0C971C71F1E900A6BC9B /* JavaEnumClass.m in Sources */ = {isa = PBXBuildFile; fileRef = F4CF0C961C71F1E900A6BC9B /* JavaEnumClass.m */; };
+		F4CF0CA01C72C52B00A6BC9B /* JavaEnumClass2.m in Sources */ = {isa = PBXBuildFile; fileRef = F4CF0C9F1C72C52B00A6BC9B /* JavaEnumClass2.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,8 @@
 		F4CF0C931C71F09E00A6BC9B /* GlobalComparatorClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalComparatorClass.m; sourceTree = "<group>"; };
 		F4CF0C951C71F1E900A6BC9B /* JavaEnumClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JavaEnumClass.h; sourceTree = "<group>"; };
 		F4CF0C961C71F1E900A6BC9B /* JavaEnumClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JavaEnumClass.m; sourceTree = "<group>"; };
+		F4CF0C9E1C72C52B00A6BC9B /* JavaEnumClass2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JavaEnumClass2.h; sourceTree = "<group>"; };
+		F4CF0C9F1C72C52B00A6BC9B /* JavaEnumClass2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JavaEnumClass2.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +99,8 @@
 				F4CF0C931C71F09E00A6BC9B /* GlobalComparatorClass.m */,
 				F4CF0C951C71F1E900A6BC9B /* JavaEnumClass.h */,
 				F4CF0C961C71F1E900A6BC9B /* JavaEnumClass.m */,
+				F4CF0C9E1C72C52B00A6BC9B /* JavaEnumClass2.h */,
+				F4CF0C9F1C72C52B00A6BC9B /* JavaEnumClass2.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -172,6 +177,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4CB45DF1C48B4B000DDC8B9 /* ViewController.m in Sources */,
+				F4CF0CA01C72C52B00A6BC9B /* JavaEnumClass2.m in Sources */,
 				F4CB45DC1C48B4B000DDC8B9 /* AppDelegate.m in Sources */,
 				F4CF0C941C71F09E00A6BC9B /* GlobalComparatorClass.m in Sources */,
 				F4CF0C971C71F1E900A6BC9B /* JavaEnumClass.m in Sources */,

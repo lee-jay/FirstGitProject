@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "GlobalComparatorClass.h"
 #import "JavaEnumClass.h"//测试load方法
+#import "JavaEnumClass2.h"
 
 @interface ViewController ()
 
@@ -34,6 +35,12 @@
     JavaEnumClass *testObject = [JavaEnumClass byte:86 name:@"MyCustomValue"];
     NSLog(@"JavaEnumClass new instance = %@", testObject);
     NSLog(@"[JavaEnumClass getAll] = %@", [JavaEnumClass getAll]);
+    
+    //测试全局枚举
+    NSLog(@"A = %@", A);
+    NSLog(@"B = %@", B);
+    //测试设置对象作为NSDiction的键值
+    NSLog(@"[JavaEnumClass2 getAll] = %@", [JavaEnumClass2 getAll]);
 }
 
 - (void)didReceiveMemoryWarning {
