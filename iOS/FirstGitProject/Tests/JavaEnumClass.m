@@ -57,6 +57,10 @@ static NSDictionary<NSNumber *, JavaEnumClass *> *INDEX;
     return INDEX;
 }
 
+- (id)copyWithZone:(nullable NSZone *)zone {
+    return self;
+}
+
 - (NSString *)description {
     return [NSString stringWithFormat:@"Class(%@) value=%d, name=%@", NSStringFromClass([self class]), self.value, self.displayName];
 }

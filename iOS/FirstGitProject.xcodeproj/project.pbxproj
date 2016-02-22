@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F4A7175D1C7ADC09005B42CE /* NSMutableMap.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A7175C1C7ADC09005B42CE /* NSMutableMap.m */; };
 		F4CB45D91C48B4B000DDC8B9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F4CB45D81C48B4B000DDC8B9 /* main.m */; };
 		F4CB45DC1C48B4B000DDC8B9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4CB45DB1C48B4B000DDC8B9 /* AppDelegate.m */; };
 		F4CB45DF1C48B4B000DDC8B9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4CB45DE1C48B4B000DDC8B9 /* ViewController.m */; };
@@ -20,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F4A7175B1C7ADC09005B42CE /* NSMutableMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMutableMap.h; sourceTree = "<group>"; };
+		F4A7175C1C7ADC09005B42CE /* NSMutableMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMutableMap.m; sourceTree = "<group>"; };
 		F4CB45D41C48B4B000DDC8B9 /* FirstGitProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstGitProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4CB45D81C48B4B000DDC8B9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F4CB45DA1C48B4B000DDC8B9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -101,6 +104,8 @@
 				F4CF0C961C71F1E900A6BC9B /* JavaEnumClass.m */,
 				F4CF0C9E1C72C52B00A6BC9B /* JavaEnumClass2.h */,
 				F4CF0C9F1C72C52B00A6BC9B /* JavaEnumClass2.m */,
+				F4A7175B1C7ADC09005B42CE /* NSMutableMap.h */,
+				F4A7175C1C7ADC09005B42CE /* NSMutableMap.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -178,6 +183,7 @@
 			files = (
 				F4CB45DF1C48B4B000DDC8B9 /* ViewController.m in Sources */,
 				F4CF0CA01C72C52B00A6BC9B /* JavaEnumClass2.m in Sources */,
+				F4A7175D1C7ADC09005B42CE /* NSMutableMap.m in Sources */,
 				F4CB45DC1C48B4B000DDC8B9 /* AppDelegate.m in Sources */,
 				F4CF0C941C71F09E00A6BC9B /* GlobalComparatorClass.m in Sources */,
 				F4CF0C971C71F1E900A6BC9B /* JavaEnumClass.m in Sources */,

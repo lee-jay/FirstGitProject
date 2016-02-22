@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface JavaEnumClass : NSObject
+@interface JavaEnumClass : NSObject<NSCopying>
 
 + (JavaEnumClass *)A;
 + (JavaEnumClass *)B;

@@ -10,6 +10,7 @@
 #import "GlobalComparatorClass.h"
 #import "JavaEnumClass.h"//测试load方法
 #import "JavaEnumClass2.h"
+#import "NSMutableMap.h"
 
 @interface ViewController ()
 
@@ -41,6 +42,9 @@
     NSLog(@"B = %@", B);
     //测试设置对象作为NSDiction的键值
     NSLog(@"[JavaEnumClass2 getAll] = %@", [JavaEnumClass2 getAll]);
+    
+    //测试NSMutableMap
+    [self doTestNSMutableMap];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -62,5 +66,24 @@
         NSLog(@"final %@", num);
     }
 }
+
+- (void)doTestNSMutableMap {
+    NSMutableMap *map = [[NSMutableMap alloc] init];
+    map[@"aaa"] = @"AAA";
+    map[@"bbb"] = @"BBB";
+    map[@"ccc"] = @"CCC";
+    NSLog(@"%@", map);
+    
+    map[JavaEnumClass.A] = @"aaa";
+    map[JavaEnumClass.B] = @"bbb";
+    NSLog(@"%@", map);
+    
+    NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
+    dict[JavaEnumClass.A] = @"AAA";
+    dict[JavaEnumClass.B] = @"BBB";
+    NSLog(@"%@", dict);
+}
+
+
 
 @end
