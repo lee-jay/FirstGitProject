@@ -45,6 +45,52 @@
     
     //测试NSMutableMap
     [self doTestNSMutableMap];
+    
+    //测试浮点数精度
+    NSLog(@"FLT_MANT_DIG: %d", FLT_MANT_DIG);
+    NSLog(@"DBL_MIN: %d", DBL_MANT_DIG);
+    NSLog(@"LDBL_MIN: %d", LDBL_MANT_DIG);
+    
+    NSLog(@"DECIMAL_DIG: %d", DECIMAL_DIG);
+    
+    NSLog(@"FLT_DIG: %d", FLT_DIG);
+    NSLog(@"DBL_DIG: %d", DBL_DIG);
+    NSLog(@"LDBL_DIG: %d", LDBL_DIG);
+    
+    NSLog(@"FLT_MIN_EXP: %d", FLT_MIN_EXP);
+    NSLog(@"DBL_MIN_EXP: %d", DBL_MIN_EXP);
+    NSLog(@"LDBL_MIN_EXP: %d", LDBL_MIN_EXP);
+    
+    NSLog(@"FLT_MIN_10_EXP: %d", FLT_MIN_10_EXP);
+    NSLog(@"DBL_MIN_10_EXP: %d", DBL_MIN_10_EXP);
+    NSLog(@"LDBL_MIN_10_EXP: %d", LDBL_MIN_10_EXP);
+    
+    NSLog(@"FLT_MAX_EXP: %d", FLT_MAX_EXP);
+    NSLog(@"DBL_MAX_EXP: %d", DBL_MAX_EXP);
+    NSLog(@"LDBL_MAX_EXP: %d", LDBL_MAX_EXP);
+    
+    NSLog(@"FLT_MAX_10_EXP: %d", FLT_MAX_10_EXP);
+    NSLog(@"DBL_MAX_10_EXP: %d", DBL_MAX_10_EXP);
+    NSLog(@"LDBL_MAX_10_EXP: %d", LDBL_MAX_10_EXP);
+    
+    NSLog(@"FLT_MAX: %.e", FLT_MAX);
+    NSLog(@"DBL_MAX: %.e", DBL_MAX);
+    NSLog(@"LDBL_MAX: %Le", LDBL_MAX);
+    
+    NSLog(@"FLT_EPSILON: %.e", FLT_EPSILON);
+    NSLog(@"DBL_EPSILON: %.e", DBL_EPSILON);
+    NSLog(@"LDBL_EPSILON: %Le", LDBL_EPSILON);
+    
+    NSLog(@"FLT_MIN: %.e", FLT_MIN);
+    NSLog(@"DBL_MIN: %.e", DBL_MIN);
+    NSLog(@"LDBL_MIN: %Le", LDBL_MIN);
+    
+    //测试数组
+    NSMutableArray<NSNumber *> *numbers = [[NSMutableArray alloc] initWithCapacity:0];
+    numbers[0] = @(10);
+    numbers[1] = @(20);
+    numbers[2] = @(30);
+    NSLog(@"numbers=%@", numbers);
 }
 
 - (void)didReceiveMemoryWarning {
