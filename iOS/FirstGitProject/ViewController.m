@@ -12,9 +12,15 @@
 #import "JavaEnumClass2.h"
 #import "NSMutableMap.h"
 
+#import "Adapter.h"
+#import "StopableThread.h"
+
+NSInteger kPriority = 10000;
+
 @interface ViewController ()
 
 @property(nonatomic, retain) IBOutlet UIButton *button;
+@property(nonatomic, retain) Adapter *adapter;
 
 @end
 
@@ -91,6 +97,27 @@
     numbers[1] = @(20);
     numbers[2] = @(30);
     NSLog(@"numbers=%@", numbers);
+    
+    //测试CFRunLoop
+    self.adapter = [[Adapter alloc] init];
+    [_adapter doStart];
+}
+
+void performTask(void *info) {
+    static NSInteger bbb;
+    NSLog(@"aaa=%ld", bbb++);
+}
+
+- (IBAction)btnDidClick:(id)sender {
+//    CFRunLoopSourceContext context = {0,(__bridge void *)(self),NULL,NULL,NULL,NULL,NULL,
+//        NULL,
+//        NULL,
+//        performTask};
+//    CFRunLoopSourceRef source = CFRunLoopSourceCreate(kCFAllocatorDefault, kPriority, &context);
+//    kPriority--;
+//    CFRunLoopAddSource([_adapter getTaskRunLoop], source, kCFRunLoopDefaultMode);
+//    CFRelease(source);
+    CFRunLoopStop([_adapter getTaskRunLoop]);
 }
 
 - (void)didReceiveMemoryWarning {
