@@ -7,6 +7,7 @@
 //
 
 #import "JavaEnumClass.h"
+#import <objc/runtime.h>
 
 static JavaEnumClass *A;
 static JavaEnumClass *B;
@@ -56,6 +57,10 @@ static NSDictionary<NSNumber *, JavaEnumClass *> *INDEX;
 + (NSDictionary<NSNumber *, JavaEnumClass *> *)getAll {
     return INDEX;
 }
+
+//- (NSString *)name {
+//    return [NSString stringWithFormat:@"%s", ivar_getName(self.value)];
+//}
 
 - (id)copyWithZone:(nullable NSZone *)zone {
     return self;

@@ -15,4 +15,6 @@
 + (JavaEnumClass *)byte:(Byte)byte name:(NSString *)name;
 + (NSDictionary<NSNumber *, JavaEnumClass *> *)getAll;
 
+//- (NSString *)name;
+
 @end

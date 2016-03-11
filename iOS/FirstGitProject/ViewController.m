@@ -11,13 +11,16 @@
 #import "JavaEnumClass.h"//测试load方法
 #import "JavaEnumClass2.h"
 #import "NSMutableMap.h"
+#import "ARCObject.h"
 
 #import "Adapter.h"
 #import "StopableThread.h"
 
 NSInteger kPriority = 10000;
 
-@interface ViewController ()
+@interface ViewController () {
+    ARCObject *_memberArcObject;
+}
 
 @property(nonatomic, retain) IBOutlet UIButton *button;
 @property(nonatomic, retain) Adapter *adapter;
@@ -93,14 +96,73 @@ NSInteger kPriority = 10000;
     
     //测试数组
     NSMutableArray<NSNumber *> *numbers = [[NSMutableArray alloc] initWithCapacity:0];
-    numbers[0] = @(10);
-    numbers[1] = @(20);
-    numbers[2] = @(30);
-    NSLog(@"numbers=%@", numbers);
+    @try {
+        numbers[24] = @(10);
+        numbers[74] = @(20);
+        numbers[2] = @(30);
+    }
+    @catch (NSException *exception) {
+        NSLog(@"测试数组 failed! exception=%@", exception);
+    }
+    @finally {
+        NSLog(@"numbers=%@", numbers);
+    }
+    
     
     //测试CFRunLoop
     self.adapter = [[Adapter alloc] init];
     [_adapter doStart];
+    
+    //测试Autolayout+UIScrollView（见storyboard）
+    
+    //测试Runtime
+    float a[] = {1.0, 2.0, 3.0};
+    NSLog(@"a[]: %s", @encode(typeof(a)));
+    NSLog(@"int **: %s", @encode(int **));
+    NSLog(@"NSObject *: %s", @encode(NSObject *));
+    
+    //测试绘制
+    @try {
+        @try {
+            CGFloat scale = [UIScreen mainScreen].scale;
+            CGRect bounds = CGRectMake(0, 0, self.view.bounds.size.width*scale, self.view.bounds.size.height*scale);
+            UIGraphicsBeginImageContextWithOptions(bounds.size, YES, 2.0f);
+//            CGContextRef context = UIGraphicsGetCurrentContext();
+            CGPoint pt = CGPointMake(0, 0);
+            NSDictionary *attributes = @{NSFontAttributeName:[UIFont systemFontOfSize:22.0f],
+                                         NSForegroundColorAttributeName:[UIColor whiteColor]};
+            [@"中华人民共和国成立了！！！！！！！" drawAtPoint:pt withAttributes:attributes];
+        } @finally {
+            UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+            UIGraphicsEndImageContext();
+            dispatch_async(dispatch_get_main_queue(), ^{
+                self.view.layer.contents = (__bridge id _Nullable)(image.CGImage);
+            });
+            //if (canvas != nil) view.getHolder().unlockCanvasAndPost(canvas); // Commit
+        }
+    } @catch (NSException *exception) {
+        NSLog(@"failed to render, exception: %@", exception);
+    } @finally {
+        
+    }
+    
+    //ARC测试
+    ARCObject *arcObject = [[ARCObject alloc] init];
+    arcObject.name = @"AAAAAA";
+    arcObject.color = [UIColor greenColor];
+    arcObject.names = @[@"BBBBBB", @"CCCCCC"];
+    arcObject.colors = @[[UIColor blueColor], [UIColor redColor]];
+    NSLog(@"arcObject=%@", arcObject);
+    _memberArcObject = [[ARCObject alloc] init];
+    _memberArcObject.name = @"DDDDDD";
+    _memberArcObject.color = [UIColor greenColor];
+    _memberArcObject.names = @[@"EEEEEE", @"FFFFFF"];
+    _memberArcObject.colors = @[[UIColor blueColor], [UIColor redColor]];
+    NSLog(@"_memberArcObject=%@", _memberArcObject);
+
+//    //测试打印变量名称
+//    NSLog(@"%@", JavaEnumClass.A.name);
+//    NSLog(@"%@", JavaEnumClass.B.name);
 }
 
 void performTask(void *info) {
@@ -117,6 +179,8 @@ void performTask(void *info) {
 //    kPriority--;
 //    CFRunLoopAddSource([_adapter getTaskRunLoop], source, kCFRunLoopDefaultMode);
 //    CFRelease(source);
+    NSLog(@"_memberArcObject=%@", _memberArcObject);
+    
     CFRunLoopStop([_adapter getTaskRunLoop]);
 }
 
