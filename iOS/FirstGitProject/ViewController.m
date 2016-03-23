@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import <CoreLocation/CoreLocation.h>
 #import "GlobalComparatorClass.h"
 #import "JavaEnumClass.h"//测试load方法
 #import "JavaEnumClass2.h"
@@ -18,12 +19,13 @@
 
 NSInteger kPriority = 10000;
 
-@interface ViewController () {
+@interface ViewController ()<CLLocationManagerDelegate> {
     ARCObject *_memberArcObject;
 }
 
 @property(nonatomic, retain) IBOutlet UIButton *button;
 @property(nonatomic, retain) Adapter *adapter;
+@property(nonatomic, strong) CLLocationManager *locationManager;
 
 @end
 
@@ -163,6 +165,19 @@ NSInteger kPriority = 10000;
 //    //测试打印变量名称
 //    NSLog(@"%@", JavaEnumClass.A.name);
 //    NSLog(@"%@", JavaEnumClass.B.name);
+    
+    NSLog(@"%s authorizationStatus=%d", __func__, [CLLocationManager authorizationStatus]);
+    self.locationManager = [[CLLocationManager alloc]init];
+    _locationManager.delegate = self;
+    _locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    if([_locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+        [_locationManager requestWhenInUseAuthorization];
+    }
+//    _locationManager.distanceFilter = 100;
+//    _locationManager.desiredAccuracy = 100;
+//    _locationManager.pausesLocationUpdatesAutomatically = NO;
+//    _locationManager.allowsBackgroundLocationUpdates = YES;
+    [_locationManager startUpdatingLocation];
 }
 
 void performTask(void *info) {
@@ -221,6 +236,38 @@ void performTask(void *info) {
     NSLog(@"%@", dict);
 }
 
+#pragma mark - <CLLocationManagerDelegate>
+- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
+    
+    if (
+        ([_locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)] && status != kCLAuthorizationStatusNotDetermined && status != kCLAuthorizationStatusAuthorizedWhenInUse) ||
+        (![_locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)] && status != kCLAuthorizationStatusNotDetermined && status != kCLAuthorizationStatusAuthorized)
+        ) {
+        
+        NSString *message = @"您的手机目前未开启定位服务，如欲开启定位服务，请至设定开启定位服务功能";
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"无法定位" message:message delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
+        [alertView show];
+        
+    }else {
+        
+        [_locationManager startUpdatingLocation];
+    }
+}
 
+- (void)locationManager:(CLLocationManager *)manager
+     didUpdateLocations:(NSArray<CLLocation *> *)location {
+    NSLog(@"%@", location);
+}
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
+{
+    NSLog(@"%s error=%@", __func__, error);
+    if ([error code] == kCLErrorDenied) {        //访问被拒绝
+        
+    }
+    if ([error code] == kCLErrorLocationUnknown) {        //无法获取位置信息
+        
+    }
+}
 
 @end
