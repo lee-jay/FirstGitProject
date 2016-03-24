@@ -165,19 +165,36 @@ NSInteger kPriority = 10000;
 //    //测试打印变量名称
 //    NSLog(@"%@", JavaEnumClass.A.name);
 //    NSLog(@"%@", JavaEnumClass.B.name);
-    
-    NSLog(@"%s authorizationStatus=%d", __func__, [CLLocationManager authorizationStatus]);
+
+    //GPS测试
     self.locationManager = [[CLLocationManager alloc]init];
     _locationManager.delegate = self;
     _locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     if([_locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
         [_locationManager requestWhenInUseAuthorization];
     }
-//    _locationManager.distanceFilter = 100;
-//    _locationManager.desiredAccuracy = 100;
-//    _locationManager.pausesLocationUpdatesAutomatically = NO;
-//    _locationManager.allowsBackgroundLocationUpdates = YES;
     [_locationManager startUpdatingLocation];
+    
+    //测试NSEnumerator遍历删除
+    @try {
+        NSMutableDictionary *infoDict = [NSMutableDictionary dictionary];
+        for (int i=0; i<100; i++) {
+            infoDict[@(i)] = @(arc4random());
+        }
+        NSNumber *key = nil;
+        NSEnumerator *it = infoDict.keyEnumerator;
+        while (key = [it nextObject]) {
+            if ([key integerValue] % 10 == 0) {
+                [infoDict removeObjectForKey:key];
+            }
+        }
+    }
+    @catch (NSException *exception) {
+        NSLog(@"Test failed! Raise exception = %@", exception);
+    }
+    @finally {
+        
+    }
 }
 
 void performTask(void *info) {
