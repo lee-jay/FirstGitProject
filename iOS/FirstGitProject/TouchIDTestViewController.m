@@ -32,26 +32,53 @@
 - (IBAction)btnTestDidClick:(id)sender {
     LAContext *context = [LAContext new];
     NSError *error;
-    context.localizedFallbackTitle = @"返回";
-    if ([context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&error]) {
-        _lbTestInfo.text = @"Touch ID is available.";
-        [context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics
-                localizedReason:NSLocalizedString(@"使用Touch ID登录", nil)
-                          reply:^(BOOL success, NSError *error) {
-                              if (success) {
-                                  _lbTestInfo.text = @"Authenticated using Touch ID.";
-                              } else {
-                                  if (error.code == kLAErrorUserFallback) {
-                                      _lbTestInfo.text = @"User tapped Enter Password";
-                                  } else if (error.code == kLAErrorUserCancel) {
-                                      _lbTestInfo.text = @"User tapped Cancel";
-                                  } else {
-                                      _lbTestInfo.text = @"Authenticated failed.";
-                                  }
-                              }
-                          }];
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 9) {
+        context.localizedFallbackTitle = @"返回";
+        if ([context canEvaluatePolicy:LAPolicyDeviceOwnerAuthentication error:&error]) {
+            _lbTestInfo.text = @"Touch ID is available.";
+            [context evaluatePolicy:LAPolicyDeviceOwnerAuthentication
+                    localizedReason:NSLocalizedString(@"使用Touch ID登录", nil)
+                              reply:^(BOOL success, NSError *error) {
+                                  dispatch_async(dispatch_get_main_queue(), ^{
+                                      if (success) {
+                                          _lbTestInfo.text = @"Authenticated using Touch ID.";
+                                      } else {
+                                          if (error.code == kLAErrorUserFallback) {
+                                              _lbTestInfo.text = @"User tapped Enter Password";
+                                          } else if (error.code == kLAErrorUserCancel) {
+                                              _lbTestInfo.text = @"User tapped Cancel";
+                                          } else {
+                                              _lbTestInfo.text = @"Authenticated failed.";
+                                          }
+                                      }
+                                  });
+                              }];
+        } else {
+            _lbTestInfo.text = [NSString stringWithFormat:@"Touch ID is not available: %@", error];
+        }
     } else {
-        _lbTestInfo.text = [NSString stringWithFormat:@"Touch ID is not available: %@", error];
+        if ([context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&error]) {
+            _lbTestInfo.text = @"Touch ID is available.";
+            [context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics
+                    localizedReason:NSLocalizedString(@"使用Touch ID登录", nil)
+                              reply:^(BOOL success, NSError *error) {
+                                  dispatch_async(dispatch_get_main_queue(), ^{
+                                      if (success) {
+                                          _lbTestInfo.text = @"Authenticated using Touch ID.";
+                                      } else {
+                                          if (error.code == kLAErrorUserFallback) {
+                                              _lbTestInfo.text = @"User tapped Enter Password";
+                                          } else if (error.code == kLAErrorUserCancel) {
+                                              _lbTestInfo.text = @"User tapped Cancel";
+                                          } else {
+                                              _lbTestInfo.text = @"Authenticated failed.";
+                                          }
+                                      }
+                                  });
+                              }];
+        } else {
+            _lbTestInfo.text = [NSString stringWithFormat:@"Touch ID is not available: %@", error];
+        }
     }
 }
 
