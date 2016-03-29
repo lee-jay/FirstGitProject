@@ -13,6 +13,12 @@
 		F4B620031C84152700648858 /* StopableThread.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B620001C84152700648858 /* StopableThread.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F4B620041C84152700648858 /* Adapter.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B620021C84152700648858 /* Adapter.m */; };
 		F4B7366B1C88301D007BE385 /* AdvancedStuct.mm in Sources */ = {isa = PBXBuildFile; fileRef = F4B7366A1C88301D007BE385 /* AdvancedStuct.mm */; };
+		F4BDC1AF1CAA22AD0030B983 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4BDC1AE1CAA22AD0030B983 /* LocalAuthentication.framework */; };
+		F4BDC1B21CAA31C20030B983 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4BDC1B11CAA31C20030B983 /* TestViewController.m */; };
+		F4BDC1B41CAA32090030B983 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4BDC1B31CAA32090030B983 /* TestViewController.xib */; };
+		F4BDC1B71CAA36810030B983 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4BDC1B61CAA36810030B983 /* BaseViewController.m */; };
+		F4BDC1BB1CAA39290030B983 /* TouchIDTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4BDC1B91CAA39290030B983 /* TouchIDTestViewController.m */; };
+		F4BDC1BC1CAA39290030B983 /* TouchIDTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4BDC1BA1CAA39290030B983 /* TouchIDTestViewController.xib */; };
 		F4CB45D91C48B4B000DDC8B9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F4CB45D81C48B4B000DDC8B9 /* main.m */; };
 		F4CB45DC1C48B4B000DDC8B9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4CB45DB1C48B4B000DDC8B9 /* AppDelegate.m */; };
 		F4CB45DF1C48B4B000DDC8B9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4CB45DE1C48B4B000DDC8B9 /* ViewController.m */; };
@@ -37,6 +43,15 @@
 		F4B620021C84152700648858 /* Adapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Adapter.m; sourceTree = "<group>"; };
 		F4B736691C88301D007BE385 /* AdvancedStuct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvancedStuct.h; sourceTree = "<group>"; };
 		F4B7366A1C88301D007BE385 /* AdvancedStuct.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AdvancedStuct.mm; sourceTree = "<group>"; };
+		F4BDC1AE1CAA22AD0030B983 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+		F4BDC1B01CAA31C20030B983 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		F4BDC1B11CAA31C20030B983 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		F4BDC1B31CAA32090030B983 /* TestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TestViewController.xib; path = ../TestViewController.xib; sourceTree = "<group>"; };
+		F4BDC1B51CAA36810030B983 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		F4BDC1B61CAA36810030B983 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		F4BDC1B81CAA39290030B983 /* TouchIDTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchIDTestViewController.h; sourceTree = "<group>"; };
+		F4BDC1B91CAA39290030B983 /* TouchIDTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchIDTestViewController.m; sourceTree = "<group>"; };
+		F4BDC1BA1CAA39290030B983 /* TouchIDTestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TouchIDTestViewController.xib; sourceTree = "<group>"; };
 		F4CB45D41C48B4B000DDC8B9 /* FirstGitProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstGitProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4CB45D81C48B4B000DDC8B9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F4CB45DA1C48B4B000DDC8B9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -61,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4BDC1AF1CAA22AD0030B983 /* LocalAuthentication.framework in Frameworks */,
 				22F51C051C9E81F7007A0F3E /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -71,6 +87,7 @@
 		F4CB45CB1C48B4B000DDC8B9 = {
 			isa = PBXGroup;
 			children = (
+				F4BDC1AE1CAA22AD0030B983 /* LocalAuthentication.framework */,
 				22F51C041C9E81F7007A0F3E /* CoreLocation.framework */,
 				F4CB45D61C48B4B000DDC8B9 /* FirstGitProject */,
 				F4CB45D51C48B4B000DDC8B9 /* Products */,
@@ -91,9 +108,17 @@
 				F4CF0C911C71F09E00A6BC9B /* Tests */,
 				F4CB45DA1C48B4B000DDC8B9 /* AppDelegate.h */,
 				F4CB45DB1C48B4B000DDC8B9 /* AppDelegate.m */,
+				F4BDC1B51CAA36810030B983 /* BaseViewController.h */,
+				F4BDC1B61CAA36810030B983 /* BaseViewController.m */,
 				F4CB45DD1C48B4B000DDC8B9 /* ViewController.h */,
 				F4CB45DE1C48B4B000DDC8B9 /* ViewController.m */,
 				F4CB45E01C48B4B000DDC8B9 /* Main.storyboard */,
+				F4BDC1B01CAA31C20030B983 /* TestViewController.h */,
+				F4BDC1B11CAA31C20030B983 /* TestViewController.m */,
+				F4BDC1B31CAA32090030B983 /* TestViewController.xib */,
+				F4BDC1B81CAA39290030B983 /* TouchIDTestViewController.h */,
+				F4BDC1B91CAA39290030B983 /* TouchIDTestViewController.m */,
+				F4BDC1BA1CAA39290030B983 /* TouchIDTestViewController.xib */,
 				F4CB45E61C48B4B000DDC8B9 /* Assets.xcassets */,
 				F4CB45E81C48B4B000DDC8B9 /* LaunchScreen.storyboard */,
 				F4CB45EB1C48B4B000DDC8B9 /* Info.plist */,
@@ -193,8 +218,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4CB45EA1C48B4B000DDC8B9 /* LaunchScreen.storyboard in Resources */,
+				F4BDC1BC1CAA39290030B983 /* TouchIDTestViewController.xib in Resources */,
 				F4CB45E71C48B4B000DDC8B9 /* Assets.xcassets in Resources */,
 				F4CB45E21C48B4B000DDC8B9 /* Main.storyboard in Resources */,
+				F4BDC1B41CAA32090030B983 /* TestViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,15 +233,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4CB45DF1C48B4B000DDC8B9 /* ViewController.m in Sources */,
+				F4BDC1B21CAA31C20030B983 /* TestViewController.m in Sources */,
 				F4B620031C84152700648858 /* StopableThread.m in Sources */,
 				F4CF0CA01C72C52B00A6BC9B /* JavaEnumClass2.m in Sources */,
 				F4A7175D1C7ADC09005B42CE /* NSMutableMap.m in Sources */,
+				F4BDC1B71CAA36810030B983 /* BaseViewController.m in Sources */,
 				F4CB45DC1C48B4B000DDC8B9 /* AppDelegate.m in Sources */,
 				F4B620041C84152700648858 /* Adapter.m in Sources */,
 				F4CF0C941C71F09E00A6BC9B /* GlobalComparatorClass.m in Sources */,
 				F4ADB68D1C92997100E46060 /* ARCObject.m in Sources */,
 				F4CF0C971C71F1E900A6BC9B /* JavaEnumClass.m in Sources */,
 				F4CB45D91C48B4B000DDC8B9 /* main.m in Sources */,
+				F4BDC1BB1CAA39290030B983 /* TouchIDTestViewController.m in Sources */,
 				F4CB45E51C48B4B000DDC8B9 /* FirstGitProject.xcdatamodeld in Sources */,
 				F4B7366B1C88301D007BE385 /* AdvancedStuct.mm in Sources */,
 			);

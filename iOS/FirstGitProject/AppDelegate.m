@@ -8,6 +8,10 @@
 
 #import "AppDelegate.h"
 
+#import <LocalAuthentication/LAContext.h>
+#import <LocalAuthentication/LAError.h>
+#import <LocalAuthentication/LAPublicDefines.h>
+
 @interface AppDelegate ()
 
 @property(nonatomic, copy) NSString *uuid;
@@ -19,6 +23,31 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    LAContext *context = [LAContext new];
+    NSError *error;
+    context.localizedFallbackTitle = @"";
+    if ([context canEvaluatePolicy:LAPolicyDeviceOwnerAuthentication error:&error]) {
+        NSLog(@"Touch ID is available.");
+        [context evaluatePolicy:LAPolicyDeviceOwnerAuthentication
+                localizedReason:NSLocalizedString(@"Use Touch ID to log in.", nil)
+                          reply:^(BOOL success, NSError *error) {
+                              if (success) {
+                                  NSLog(@"Authenticated using Touch ID.");
+                              } else {
+                                  if (error.code == kLAErrorUserFallback) {
+                                      NSLog(@"User tapped Enter Password");
+                                  } else if (error.code == kLAErrorUserCancel) {
+                                      NSLog(@"User tapped Cancel");
+                                  } else {
+                                      NSLog(@"Authenticated failed.");
+                                  }
+                              }
+                          }];
+    } else {
+        NSLog(@"Touch ID is not available: %@", error);
+    }
+    
     return YES;
 }
 
