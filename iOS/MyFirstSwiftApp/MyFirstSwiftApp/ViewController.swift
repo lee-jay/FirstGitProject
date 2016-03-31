@@ -7,6 +7,11 @@
 //
 
 import UIKit
+import Foundation
+
+func helloWorld() {
+    print("Hello World!");
+}
 
 func makeIncreasement() -> (Int -> Int) {
     func plusOne(n : Int) -> Int {
@@ -28,7 +33,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // First of all, of course, Hello World!! :)
+        helloWorld()
+        
         let bounds = self.view.bounds;
         let label = UILabel(frame: CGRect(x: 10, y: 60, width: bounds.size.width-10*2, height: 300));
         label.textAlignment = NSTextAlignment.Center;
@@ -62,16 +70,30 @@ class ViewController: UIViewController {
         let aaa = makeDecreasement()(makeIncreasement()(100));
         NSLog("%d", aaa);
         
-        //这种遍历太奇葩
-        let numbers = [20, 19, 7, 12]
-        NSLog("%@", numbers.map({
-            (number: Int) -> Int in
-            let result = 3 * number
-            return result
+//        {
+            //这种遍历太奇葩
+            let numbers = [20, 19, 7, 12]
+            NSLog("%@", numbers.map({
+                (number: Int) -> Int in
+                    let result = 3 * number
+                    return result
+                })
+            );
+            NSLog("%@", numbers.map({
+                (number: Int) -> Int in
+                return ( (number % 2 == 1) ?0:number);
+                })
+            )
+            var max : Int = Int.min;
+            numbers.map({
+                (number : Int) in
+                max = ((number > max) ? number : max)
             })
-        );
+            NSLog("max=%ld", max);
+//        }
         
-        
+        //官方的例子代码无法编译
+        //sort([1,5,3,12,2]){$0>$1}
     }
 
     override func didReceiveMemoryWarning() {
