@@ -10,8 +10,6 @@
 #import "TestViewController.h"
 #import "TouchIDTestViewController.h"
 
-NSInteger kPriority = 10000;
-
 @interface ViewController ()<UITableViewDataSource, UITableViewDelegate> {
 
 }

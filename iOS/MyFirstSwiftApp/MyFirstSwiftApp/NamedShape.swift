@@ -18,6 +18,13 @@ class NamedShape {
     
     init(name: String) {
         self.name = name
+        self.subname = name
+    }
+    
+    var subname : String {
+        willSet {
+            self.name = "aaa"
+        }
     }
     
     func simpleDescription() -> String {

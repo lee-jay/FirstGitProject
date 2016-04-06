@@ -195,6 +195,8 @@ NSInteger kPriority = 10000;
     @finally {
         
     }
+    
+    NSLog(@"~0l=0x%08lx", ~0l);
 }
 
 void performTask(void *info) {
