@@ -92,11 +92,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F418309B1CB76E0A00F145C7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				22F51C041C9E81F7007A0F3E /* CoreLocation.framework */,
+				F4BDC1AE1CAA22AD0030B983 /* LocalAuthentication.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F4CB45CB1C48B4B000DDC8B9 = {
 			isa = PBXGroup;
 			children = (
-				F4BDC1AE1CAA22AD0030B983 /* LocalAuthentication.framework */,
-				22F51C041C9E81F7007A0F3E /* CoreLocation.framework */,
+				F418309B1CB76E0A00F145C7 /* Frameworks */,
 				F4CB45D61C48B4B000DDC8B9 /* FirstGitProject */,
 				F4CB45D51C48B4B000DDC8B9 /* Products */,
 			);
