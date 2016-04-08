@@ -196,7 +196,18 @@ NSInteger kPriority = 10000;
         
     }
     
+    //~的作用
     NSLog(@"~0l=0x%08lx", ~0l);
+    
+    //以纳秒nanoSecond为基准的计数宏定义
+    NSLog(@"1 second（秒） = %llu nanoseconds（纳秒）.", NSEC_PER_SEC);
+    NSLog(@"1 millisecond（毫秒） = %llu nanoseconds（纳秒）.", NSEC_PER_MSEC);
+    NSLog(@"1 microsecond（微秒） = %llu nanoseconds（纳秒）.", NSEC_PER_USEC);
+    NSLog(@"1 second（秒） = %llu microsecond（微秒）.", USEC_PER_SEC);
+    NSLog(@"How long after is now? %llu nanoseconds!", DISPATCH_TIME_NOW);
+    NSLog(@"How long after is forever? %llu(0x%llX) nanoseconds!", DISPATCH_TIME_FOREVER, DISPATCH_TIME_FOREVER);
+    
+    
 }
 
 void performTask(void *info) {

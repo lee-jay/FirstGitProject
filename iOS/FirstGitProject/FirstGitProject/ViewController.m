@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "TestViewController.h"
 #import "TouchIDTestViewController.h"
+#import "GCDTestViewController.h"
 
 @interface ViewController ()<UITableViewDataSource, UITableViewDelegate> {
 
@@ -24,7 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.allListData = @[@"测试黑科技", @"测试TouchID"];
+    self.allListData = @[@"测试黑科技", @"测试TouchID", @"CGD测试"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -61,6 +62,13 @@
         case 1:
         {
             TouchIDTestViewController *controller = [TouchIDTestViewController viewControllerFromNib];
+            controller.title = _allListData[indexPath.row];
+            [self.navigationController pushViewController:controller animated:YES];
+        }
+            break;
+        case 2:
+        {
+            GCDTestViewController *controller = [GCDTestViewController viewControllerFromNib];
             controller.title = _allListData[indexPath.row];
             [self.navigationController pushViewController:controller animated:YES];
         }
