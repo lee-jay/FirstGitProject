@@ -30,6 +30,7 @@
 		F4CB45E51C48B4B000DDC8B9 /* FirstGitProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F4CB45E31C48B4B000DDC8B9 /* FirstGitProject.xcdatamodeld */; };
 		F4CB45E71C48B4B000DDC8B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4CB45E61C48B4B000DDC8B9 /* Assets.xcassets */; };
 		F4CB45EA1C48B4B000DDC8B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4CB45E81C48B4B000DDC8B9 /* LaunchScreen.storyboard */; };
+		F4CC65CF1CCA3BE0001875F2 /* dyci.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4CC65CE1CCA3BE0001875F2 /* dyci.framework */; };
 		F4CF0C941C71F09E00A6BC9B /* GlobalComparatorClass.m in Sources */ = {isa = PBXBuildFile; fileRef = F4CF0C931C71F09E00A6BC9B /* GlobalComparatorClass.m */; };
 		F4CF0C971C71F1E900A6BC9B /* JavaEnumClass.m in Sources */ = {isa = PBXBuildFile; fileRef = F4CF0C961C71F1E900A6BC9B /* JavaEnumClass.m */; };
 		F4CF0CA01C72C52B00A6BC9B /* JavaEnumClass2.m in Sources */ = {isa = PBXBuildFile; fileRef = F4CF0C9F1C72C52B00A6BC9B /* JavaEnumClass2.m */; };
@@ -75,6 +76,7 @@
 		F4CB45E61C48B4B000DDC8B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4CB45E91C48B4B000DDC8B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4CB45EB1C48B4B000DDC8B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4CC65CE1CCA3BE0001875F2 /* dyci.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = dyci.framework; sourceTree = "<group>"; };
 		F4CF0C921C71F09E00A6BC9B /* GlobalComparatorClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalComparatorClass.h; sourceTree = "<group>"; };
 		F4CF0C931C71F09E00A6BC9B /* GlobalComparatorClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalComparatorClass.m; sourceTree = "<group>"; };
 		F4CF0C951C71F1E900A6BC9B /* JavaEnumClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JavaEnumClass.h; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				F4BDC1AF1CAA22AD0030B983 /* LocalAuthentication.framework in Frameworks */,
 				22F51C051C9E81F7007A0F3E /* CoreLocation.framework in Frameworks */,
 				DDE8379B052971D304CC48BC /* libPods.a in Frameworks */,
+				F4CC65CF1CCA3BE0001875F2 /* dyci.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +122,7 @@
 		F4CB45CB1C48B4B000DDC8B9 = {
 			isa = PBXGroup;
 			children = (
+				F4CC65CD1CCA3BE0001875F2 /* Vendors */,
 				F418309B1CB76E0A00F145C7 /* Frameworks */,
 				F4CB45D61C48B4B000DDC8B9 /* FirstGitProject */,
 				F4CB45D51C48B4B000DDC8B9 /* Products */,
@@ -169,6 +173,14 @@
 				F4CB45D81C48B4B000DDC8B9 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F4CC65CD1CCA3BE0001875F2 /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+				F4CC65CE1CCA3BE0001875F2 /* dyci.framework */,
+			);
+			path = Vendors;
 			sourceTree = "<group>";
 		};
 		F4CF0C911C71F09E00A6BC9B /* Tests */ = {
@@ -450,7 +462,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Vendors",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
@@ -494,7 +509,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Vendors",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
