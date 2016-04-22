@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		22F51C051C9E81F7007A0F3E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22F51C041C9E81F7007A0F3E /* CoreLocation.framework */; };
+		DDE8379B052971D304CC48BC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E737CBD5C7C4D66F76FEB9B /* libPods.a */; };
 		F41830951CB768EF00F145C7 /* SafeDispatchSync.m in Sources */ = {isa = PBXBuildFile; fileRef = F41830941CB768EF00F145C7 /* SafeDispatchSync.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F41830991CB76A0400F145C7 /* GCDTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F41830971CB76A0400F145C7 /* GCDTestViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F418309A1CB76A0400F145C7 /* GCDTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F41830981CB76A0400F145C7 /* GCDTestViewController.xib */; };
 		F4A7175D1C7ADC09005B42CE /* NSMutableMap.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A7175C1C7ADC09005B42CE /* NSMutableMap.m */; };
 		F4AD592F1CC9E5F700A77274 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4AD592E1CC9E5F700A77274 /* TestViewController.xib */; };
+		F4AD59321CCA000C00A77274 /* StopableThread.m in Sources */ = {isa = PBXBuildFile; fileRef = F4AD59311CCA000C00A77274 /* StopableThread.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F4ADB68D1C92997100E46060 /* ARCObject.m in Sources */ = {isa = PBXBuildFile; fileRef = F4ADB68C1C92997100E46060 /* ARCObject.m */; };
-		F4B620031C84152700648858 /* StopableThread.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B620001C84152700648858 /* StopableThread.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F4B620041C84152700648858 /* Adapter.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B620021C84152700648858 /* Adapter.m */; };
 		F4B7366B1C88301D007BE385 /* AdvancedStuct.mm in Sources */ = {isa = PBXBuildFile; fileRef = F4B7366A1C88301D007BE385 /* AdvancedStuct.mm */; };
 		F4BDC1AF1CAA22AD0030B983 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4BDC1AE1CAA22AD0030B983 /* LocalAuthentication.framework */; };
@@ -36,6 +37,9 @@
 
 /* Begin PBXFileReference section */
 		22F51C041C9E81F7007A0F3E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		2E737CBD5C7C4D66F76FEB9B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BC7CEB9CF3691A5B3CE007E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		7828E6488070D4BF45F95D13 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F41830931CB768EF00F145C7 /* SafeDispatchSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SafeDispatchSync.h; sourceTree = "<group>"; };
 		F41830941CB768EF00F145C7 /* SafeDispatchSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SafeDispatchSync.m; sourceTree = "<group>"; };
 		F41830961CB76A0400F145C7 /* GCDTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDTestViewController.h; sourceTree = "<group>"; };
@@ -44,10 +48,10 @@
 		F4A7175B1C7ADC09005B42CE /* NSMutableMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMutableMap.h; sourceTree = "<group>"; };
 		F4A7175C1C7ADC09005B42CE /* NSMutableMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMutableMap.m; sourceTree = "<group>"; };
 		F4AD592E1CC9E5F700A77274 /* TestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
+		F4AD59301CCA000C00A77274 /* StopableThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StopableThread.h; sourceTree = "<group>"; };
+		F4AD59311CCA000C00A77274 /* StopableThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StopableThread.m; sourceTree = "<group>"; };
 		F4ADB68B1C92997100E46060 /* ARCObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARCObject.h; sourceTree = "<group>"; };
 		F4ADB68C1C92997100E46060 /* ARCObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARCObject.m; sourceTree = "<group>"; };
-		F4B61FFF1C84152700648858 /* StopableThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StopableThread.h; sourceTree = "<group>"; };
-		F4B620001C84152700648858 /* StopableThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StopableThread.m; sourceTree = "<group>"; };
 		F4B620011C84152700648858 /* Adapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Adapter.h; sourceTree = "<group>"; };
 		F4B620021C84152700648858 /* Adapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Adapter.m; sourceTree = "<group>"; };
 		F4B736691C88301D007BE385 /* AdvancedStuct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvancedStuct.h; sourceTree = "<group>"; };
@@ -86,17 +90,28 @@
 			files = (
 				F4BDC1AF1CAA22AD0030B983 /* LocalAuthentication.framework in Frameworks */,
 				22F51C051C9E81F7007A0F3E /* CoreLocation.framework in Frameworks */,
+				DDE8379B052971D304CC48BC /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8CF00761BB2B4AC40C37CAE4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7828E6488070D4BF45F95D13 /* Pods.debug.xcconfig */,
+				4BC7CEB9CF3691A5B3CE007E /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F418309B1CB76E0A00F145C7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				22F51C041C9E81F7007A0F3E /* CoreLocation.framework */,
 				F4BDC1AE1CAA22AD0030B983 /* LocalAuthentication.framework */,
+				2E737CBD5C7C4D66F76FEB9B /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -107,6 +122,7 @@
 				F418309B1CB76E0A00F145C7 /* Frameworks */,
 				F4CB45D61C48B4B000DDC8B9 /* FirstGitProject */,
 				F4CB45D51C48B4B000DDC8B9 /* Products */,
+				8CF00761BB2B4AC40C37CAE4 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -166,10 +182,10 @@
 				F4CF0C9F1C72C52B00A6BC9B /* JavaEnumClass2.m */,
 				F4A7175B1C7ADC09005B42CE /* NSMutableMap.h */,
 				F4A7175C1C7ADC09005B42CE /* NSMutableMap.m */,
-				F4B61FFF1C84152700648858 /* StopableThread.h */,
-				F4B620001C84152700648858 /* StopableThread.m */,
 				F4B620011C84152700648858 /* Adapter.h */,
 				F4B620021C84152700648858 /* Adapter.m */,
+				F4AD59301CCA000C00A77274 /* StopableThread.h */,
+				F4AD59311CCA000C00A77274 /* StopableThread.m */,
 				F4B736691C88301D007BE385 /* AdvancedStuct.h */,
 				F4B7366A1C88301D007BE385 /* AdvancedStuct.mm */,
 				F4ADB68B1C92997100E46060 /* ARCObject.h */,
@@ -187,9 +203,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F4CB45EE1C48B4B000DDC8B9 /* Build configuration list for PBXNativeTarget "FirstGitProject" */;
 			buildPhases = (
+				2CF6DEBF11F02A3B024BBF1D /* Check Pods Manifest.lock */,
 				F4CB45D01C48B4B000DDC8B9 /* Sources */,
 				F4CB45D11C48B4B000DDC8B9 /* Frameworks */,
 				F4CB45D21C48B4B000DDC8B9 /* Resources */,
+				C78AC1AEFD99F93548409F6A /* Embed Pods Frameworks */,
+				5D2E869EFBDD0ACD758081F0 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -249,6 +268,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2CF6DEBF11F02A3B024BBF1D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5D2E869EFBDD0ACD758081F0 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C78AC1AEFD99F93548409F6A /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F4CB45D01C48B4B000DDC8B9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -256,8 +323,8 @@
 			files = (
 				F4CB45DF1C48B4B000DDC8B9 /* ViewController.m in Sources */,
 				F4BDC1B21CAA31C20030B983 /* TestViewController.m in Sources */,
-				F4B620031C84152700648858 /* StopableThread.m in Sources */,
 				F4CF0CA01C72C52B00A6BC9B /* JavaEnumClass2.m in Sources */,
+				F4AD59321CCA000C00A77274 /* StopableThread.m in Sources */,
 				F4A7175D1C7ADC09005B42CE /* NSMutableMap.m in Sources */,
 				F4BDC1B71CAA36810030B983 /* BaseViewController.m in Sources */,
 				F4CB45DC1C48B4B000DDC8B9 /* AppDelegate.m in Sources */,
@@ -378,11 +445,42 @@
 		};
 		F4CB45EF1C48B4B000DDC8B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7828E6488070D4BF45F95D13 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+				);
 				INFOPLIST_FILE = FirstGitProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"-isystem",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+				);
+				PODS_ROOT = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.leejay.FirstGitProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "fd734144-2272-4097-8687-636b1d630c72";
@@ -391,11 +489,42 @@
 		};
 		F4CB45F01C48B4B000DDC8B9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BC7CEB9CF3691A5B3CE007E /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+				);
 				INFOPLIST_FILE = FirstGitProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"-isystem",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+				);
+				PODS_ROOT = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.leejay.FirstGitProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "fd734144-2272-4097-8687-636b1d630c72";

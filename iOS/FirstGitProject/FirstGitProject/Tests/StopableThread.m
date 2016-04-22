@@ -67,9 +67,9 @@
             CFRunLoopSourceContext context = {0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL};
             CFRunLoopSourceRef source = CFRunLoopSourceCreate(kCFAllocatorDefault, 0, &context);
             CFRunLoopAddSource(CFRunLoopGetCurrent(), source, kCFRunLoopDefaultMode);
-            NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+            //NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
             [self.runnable run];
-            [pool release];
+            //[pool release];
             CFRunLoopRemoveSource(CFRunLoopGetCurrent(), source, kCFRunLoopDefaultMode);
             CFRelease(source);
         } @catch (NSException *e) {
