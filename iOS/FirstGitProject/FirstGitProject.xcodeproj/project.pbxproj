@@ -483,7 +483,7 @@
 				PODS_ROOT = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.leejay.FirstGitProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "fd734144-2272-4097-8687-636b1d630c72";
+				PROVISIONING_PROFILE = "b226265b-a0f3-4af8-b024-bbacc0de3d09";
 			};
 			name = Debug;
 		};
@@ -527,7 +527,7 @@
 				PODS_ROOT = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.leejay.FirstGitProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "fd734144-2272-4097-8687-636b1d630c72";
+				PROVISIONING_PROFILE = "b226265b-a0f3-4af8-b024-bbacc0de3d09";
 			};
 			name = Release;
 		};

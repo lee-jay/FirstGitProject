@@ -11,6 +11,7 @@
 #import <LocalAuthentication/LAContext.h>
 #import <LocalAuthentication/LAError.h>
 #import <LocalAuthentication/LAPublicDefines.h>
+#import <Bugtags/Bugtags.h>
 
 @interface AppDelegate ()
 
@@ -47,6 +48,10 @@
     } else {
         NSLog(@"Touch ID is not available: %@", error);
     }
+    
+    BugtagsOptions *options = [[BugtagsOptions alloc] init];
+    options.trackingCrashes = YES; // 具体可设置的属性请查看 Bugtags.h
+    [Bugtags startWithAppKey:@"2051ed5df417eee0d58afcede1e52724" invocationEvent:BTGInvocationEventBubble options:options];
     
     return YES;
 }
