@@ -15,4 +15,9 @@ view.backgroundColor = UIColor.greenColor();
 
 view.backgroundColor = UIColor.redColor();
 
+let label = "The width is "
+let width = 94
+let widthLabel1 = label + String(width)
+
+
 
