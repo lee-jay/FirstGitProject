@@ -19,5 +19,14 @@ let label = "The width is "
 let width = 94
 let widthLabel1 = label + String(width)
 
+let emptyArray = [String]()
+let emptyDictionary = [String : Int]()
+let aaa:String?
+aaa = "fwfekjwof"
+
+print(aaa)
+
+
+
 
 

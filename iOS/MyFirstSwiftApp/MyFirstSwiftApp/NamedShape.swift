@@ -9,10 +9,9 @@
 import Foundation
 import UIKit
 
-class NamedShape {
-//    public var viewIfLoaded: UIView? { get }
-    var numberOfSides: Int = 0;
-    var name: String;
+class NamedShape : Shape {
+
+    var name: String
 //    public var viewIfLoaded: UIView? { get }
 //    public var subname : String? { get }
     
@@ -27,7 +26,16 @@ class NamedShape {
         }
     }
     
-    func simpleDescription() -> String {
-        return "A shape with \(numberOfSides) sides."
+    var perimeter : Double {
+        get {
+            return 3.0 * sideLength
+        }
+        set {
+            sideLength = newValue / 3.0
+        }
+    }
+    
+    override func simpleDescription() -> String {
+        return "\(self.name) with \(numberOfSides) sides."
     }
 }

@@ -29,6 +29,35 @@ func makeDecreasement() -> (Int -> Int) {
     return minusOne;
 }
 
+func makePlus() -> ((Int, Int) -> Int) {
+    func add(a : Int, b : Int) ->Int {
+        return a + b;
+    }
+    
+    return add;
+}
+
+func makeMinus() -> ((Int, Int) -> Int) {
+    func reduce(a : Int, b : Int) ->Int {
+        return a + b;
+    }
+    
+    return reduce;
+}
+
+func greeting (let name : String, let day : String) -> String {
+    let text = "Hello \(name), today is \(day)"
+    return text
+}
+
+func getPrices () -> (p0 : Double, p1 : Double, p2 : Double) {
+    let price1 = 0.15
+    let price2 = 2.5
+    let price3 = 0.00
+    
+    return (price1, price2, price3);
+}
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -65,21 +94,28 @@ class ViewController: UIViewController {
             vegetableComment = "Everything tastes good in soup."
         }
         //print(vegetableComment);
-        NSLog("%@", vegetableComment!);
+        print(vegetableComment!);
         
-        let aaa = makeDecreasement()(makeIncreasement()(100));
-        NSLog("%d", aaa);
+        let a1 = makeDecreasement()(makeIncreasement()(100));
+        print("\(a1)");
+        
+        let a2 = makePlus()(10, 6);
+        print("\(a2)");
         
 //        {
             //这种遍历太奇葩
             let numbers = [20, 19, 7, 12]
-            NSLog("%@", numbers.map({
+            print(numbers.map({
                 (number: Int) -> Int in
                     let result = 3 * number
                     return result
                 })
             );
-            NSLog("%@", numbers.map({
+            print(numbers.map({
+                number in 3 * number
+                })
+            );
+            print(numbers.map({
                 (number: Int) -> Int in
                 return ( (number % 2 == 1) ?0:number);
                 })
@@ -89,11 +125,55 @@ class ViewController: UIViewController {
                 (number : Int) in
                 max = ((number > max) ? number : max)
             })
-            NSLog("max=%ld", max);
+            print("max=\(max)");
 //        }
+        
+        let ascNumbers = numbers.sort{ $0 < $1}
+        let descNumbers = numbers.sort{ $0 > $1}
+        print("ascNumbers=\(ascNumbers)")
+        print("descNumbers=\(descNumbers)")
         
         //官方的例子代码无法编译
         //sort([1,5,3,12,2]){$0>$1}
+        
+        let aaaa:String?
+        aaaa = nil
+        print(aaaa)
+        
+        let nameAAA = aaaa
+        print(nameAAA)
+        if let bbbbb:Bool? = true {
+            print(bbbbb);
+        }
+        if let name:String? = aaaa {
+            print(name)
+            print("bbbb")
+        } else {
+            print("wrong")
+        }
+        while let nameBBB = aaaa {
+            print("while nameBBB=\(nameBBB)")
+        }
+        
+        for var i in 0...5 {
+            print("i=\(i)")
+        }
+        
+        print(greeting("Tom", day:"Wendesday"))
+        
+        let prices = getPrices()
+        print("prices=\(prices)")
+        print("prices.p0=\(prices.p0)")
+        print("prices.0=\(prices.0)")
+        
+        
+        let triangle = NamedShape(name: "三角形")
+        print("triangle.sideLength=\(triangle.sideLength)")
+        triangle.perimeter = 9.6
+        print("triangle.sideLength=\(triangle.sideLength)")
+        triangle.sideLength = 2
+        print("triangle.perimeter=\(triangle.perimeter)")
+        print(triangle.simpleDescription())
     }
 
     override func didReceiveMemoryWarning() {
