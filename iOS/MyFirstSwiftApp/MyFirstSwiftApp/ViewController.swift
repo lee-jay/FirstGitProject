@@ -173,7 +173,47 @@ class ViewController: UIViewController {
         print("triangle.sideLength=\(triangle.sideLength)")
         triangle.sideLength = 2
         print("triangle.perimeter=\(triangle.perimeter)")
-        print(triangle.simpleDescription())
+        triangle.simpleDescription()
+        
+        let triangleAndSquare = TriangleAndSquare(size: 10, name: "another test sample")
+        print(triangleAndSquare.square.sideLength)
+        print(triangleAndSquare.triangle.sideLength)
+        triangleAndSquare.simpleDescription()
+        triangleAndSquare.square = NamedShape(sideLength: 50, name: "larger square")
+        print(triangleAndSquare.triangle.sideLength)
+        triangleAndSquare.simpleDescription()
+        
+        let optionalSquare : NamedShape? = NamedShape(sideLength: 2.5, name: "Optional square")
+        let sideLength = optionalSquare?.sideLength
+        print(sideLength)
+        
+        
+        enum Suit {
+            case Spades, Hearts, Diamonds, Clubs
+            func simpleDescription() -> String {
+                switch self {
+                case .Spades:
+                    return "spades"
+                case Hearts:
+                    return "hearts"
+                case Diamonds:
+                    return "diamonds"
+                case Clubs:
+                    return "clubs"
+                }
+            }
+            func color() -> String {
+                switch self {
+                case Spades, Clubs:
+                    return "black"
+                case Diamonds, Hearts:
+                    return "red"
+                }
+            }
+        }
+        let hearts = Suit.Hearts
+        print(hearts.simpleDescription())
+        print(hearts.color())
     }
 
     override func didReceiveMemoryWarning() {

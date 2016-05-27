@@ -11,8 +11,8 @@ import Foundation
 class Shape {
     var numberOfSides = 0;
     var sideLength = 0.0
-    func simpleDescription() -> String {
-        return "A shape with \(numberOfSides) sides.";
+    func simpleDescription() {
+        print("A shape with \(numberOfSides) sides.")
     };
 }
 

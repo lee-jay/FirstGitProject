@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		F435ECBB1CAD4718006F7476 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = F435ECBA1CAD4718006F7476 /* Shape.swift */; };
 		F435ECBD1CAD591B006F7476 /* NamedShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = F435ECBC1CAD591B006F7476 /* NamedShape.swift */; };
+		F47DF2E51CF838AC001C6CFA /* TriangleAndSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47DF2E41CF838AC001C6CFA /* TriangleAndSquare.swift */; };
 		F4B0DE361CABABC900BB62D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B0DE351CABABC900BB62D2 /* AppDelegate.swift */; };
 		F4B0DE381CABABC900BB62D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B0DE371CABABC900BB62D2 /* ViewController.swift */; };
 		F4B0DE3B1CABABC900BB62D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4B0DE391CABABC900BB62D2 /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 /* Begin PBXFileReference section */
 		F435ECBA1CAD4718006F7476 /* Shape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
 		F435ECBC1CAD591B006F7476 /* NamedShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamedShape.swift; sourceTree = "<group>"; };
+		F47DF2E41CF838AC001C6CFA /* TriangleAndSquare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriangleAndSquare.swift; sourceTree = "<group>"; };
 		F4B0DE321CABABC900BB62D2 /* MyFirstSwiftApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFirstSwiftApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4B0DE351CABABC900BB62D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4B0DE371CABABC900BB62D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				F4B0DE371CABABC900BB62D2 /* ViewController.swift */,
 				F435ECBA1CAD4718006F7476 /* Shape.swift */,
 				F435ECBC1CAD591B006F7476 /* NamedShape.swift */,
+				F47DF2E41CF838AC001C6CFA /* TriangleAndSquare.swift */,
 				F4B0DE391CABABC900BB62D2 /* Main.storyboard */,
 				F4B0DE3F1CABABC900BB62D2 /* Assets.xcassets */,
 				F4B0DE411CABABC900BB62D2 /* LaunchScreen.storyboard */,
@@ -267,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F47DF2E51CF838AC001C6CFA /* TriangleAndSquare.swift in Sources */,
 				F4B0DE3E1CABABC900BB62D2 /* MyFirstSwiftApp.xcdatamodeld in Sources */,
 				F435ECBD1CAD591B006F7476 /* NamedShape.swift in Sources */,
 				F4B0DE381CABABC900BB62D2 /* ViewController.swift in Sources */,

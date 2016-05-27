@@ -20,6 +20,13 @@ class NamedShape : Shape {
         self.subname = name
     }
     
+    init(sideLength : Double, name : String) {
+        self.name = name
+        self.subname = name
+        super.init()
+        self.sideLength = sideLength
+    }
+    
     var subname : String {
         willSet {
             self.name = "aaa"
@@ -35,7 +42,7 @@ class NamedShape : Shape {
         }
     }
     
-    override func simpleDescription() -> String {
-        return "\(self.name) with \(numberOfSides) sides."
+    override func simpleDescription() {
+        print("\(self.name) with \(numberOfSides) sides.")
     }
 }
